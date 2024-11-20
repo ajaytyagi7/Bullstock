@@ -1,0 +1,225 @@
+.header{
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    animation: change 20s infinite ease-in-out;
+}
+
+.contact-header{
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    animation: change 20s infinite ease-in-out;
+}
+
+
+
+
+.likebtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+  }
+  
+  .likebtn:hover > .icon {
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: .2s linear;
+  }
+  
+  .likebtn:focus > .icon {
+    fill: #fd1853;
+    animation: grosseur .2s linear;
+  }
+  
+  @keyframes grosseur {
+    0% {
+      width: 50px;
+      height: 50px;
+      fill: #fd1853;
+    }
+  
+    100% {
+      width: 30px;
+      height: 30px;
+      fill: #fd1853;
+    }
+  }
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 1.25rem; 
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s, text-decoration 0.3s;
+  }
+  
+  .category-item:hover {
+    color: #10b981; 
+    text-decoration: underline;
+  }
+  
+  .category-item.active {
+    color: #10b981; 
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 640px) {
+    .category-item {
+      font-size: 1rem; 
+    }
+  }
+  
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .category-item {
+      font-size: 1.25rem; 
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .category-item {
+      font-size: 1.5rem; 
+    }
+  }
+
+ 
+
+  
+.Ticker {
+ 
+  /* padding: 10px; */
+}
+
+@media (max-width: 640px) {
+  .Ticker iframe {
+    width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .Ticker iframe {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Ticker iframe {
+    width: 100%;
+  }
+}
+
+
+.Twitter {
+  font-size: 1.25rem; 
+  padding: 10px;
+  overflow-x: auto; 
+}
+
+@media (max-width: 640px) {
+  .Twitter {
+    font-size: 1rem; 
+  }
+  .Twitter iframe {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .Twitter {
+    font-size: 1.125rem; 
+    padding: 9px;
+  }
+  .Twitter iframe {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Twitter {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  .Twitter iframe {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+.Stock {
+  font-size: 1.25rem; 
+  padding: 10px;
+ 
+}
+
+@media (max-width: 640px) {
+  .Stock iframe {
+    width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .Stock iframe {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Stock iframe {
+    width: 100%;
+  }
+}
+ 
+.Youtube {
+  font-size: 1.25rem; 
+}
+
+@media (max-width: 640px) {
+  .Youtube iframe {
+    width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .Youtube iframe {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Youtube iframe {
+    width: 100%;
+  }
+}
+
+/* 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+/* Ensure the root element takes up the full width and height */
+/* #root {
+  width: 100%;
+  height: 100%;
+}  */
+  
+ 
+  
+ 
+  
+  
+  
+   
