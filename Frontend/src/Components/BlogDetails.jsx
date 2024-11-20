@@ -7,7 +7,7 @@ const BlogDetails = () => {
   const { id } = useParams();
 
   const fetchBlogDetails = async () => {
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/blog/getbyid` + id);
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/blog/getbyid/` + id);
     console.log(res.status);
 
     const data = await res.json();
@@ -25,7 +25,7 @@ const BlogDetails = () => {
       <div className='col-md-10 mx-auto'>
         {blogDetails.map((item) => (
           <div className='py-5' key={item.id}>
-            <img className='img-fluid mx-auto w-75' src={`${import.meta.env.VITE_API_URL}` + item.image} alt="" />
+            <img className='img-fluid mx-auto w-75' src={'http://localhost:5000/' + item.image} alt="" />
             <h1 className='mt-3 text-3xl font-semibold mb-3 text-center'>{item.title}</h1>
             <p>{item.date}</p>
             <MDEditor.Markdown className='p-3 ' source={item.details} style={{ whiteSpace: 'pre-wrap' }} />

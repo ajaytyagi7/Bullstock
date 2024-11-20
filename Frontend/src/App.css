@@ -201,21 +201,22 @@
   }
 }
 
-/* 
-html, body {
+
+/* Base styles for the navbar */
+.navbar {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; 
+  background-color: #333;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure the root element takes up the full width and height */
-/* #root {
-  width: 100%;
-  height: 100%;
-}  */
-  
+
  
   
  

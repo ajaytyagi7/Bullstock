@@ -2,6 +2,9 @@ import React from 'react'
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react'
+import img4 from '../Images/img4.png'
+import img5 from '../Images/img5.png'
+import img6 from '../Images/img6.png'
 
 const Service = () => {
     useEffect(() => {
@@ -29,7 +32,7 @@ Explore our comprehensive services, including personalized investing, expert tra
             <div className='grid  sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-3  gap-4'>
                 <div  data-aos="fade-right" className='card shadow border-emerald-400   mb-3  '>
                     <div>
-                <img className='img-fluid' src="https://themewagon.github.io/stocker/img/service-3.jpg" alt="" />
+                <img className='img-fluid' src={img4} alt="" />
 
                     </div>
                     <div className="card-body">
@@ -40,24 +43,24 @@ Explore our comprehensive services, including personalized investing, expert tra
                 </div>
                 <div data-aos="fade-up" className='card shadow border-emerald-400  mb-3  '>
                     <div>
-                    <img className='img-fluid'  src="https://themewagon.github.io/stocker/img/service-1.jpg" alt="" />
+                    <img className='img-fluid'  src={img5} alt="" />
 
                     </div>
                     <div className="card-body">
                         <h1 className='text-center text-3xl font-semibold '>Expert Analysis</h1>
-                        <h1 className='mt-3 text-lg text-center'>Gain valuable insights from our team of financial experts who provide in-depth analysis and predictions on market trends and stock movements. </h1>
+                        <h1 className='mt-3 text-lg text-center'>Expert analysis applies specialized knowledge to assess, interpret data, solve problems, and provide informed solutions. </h1>
                         <button className='bg-emerald-400 w-100 rounded-2xl p-1 mt-3 font-semibold text-white'>Learn More</button>
                         
                     </div>
                 </div>
                 <div  data-aos="fade-left" className='card shadow border-emerald-400  mb-3  '>
                     <div>
-                    <img className='img-fluid'  src="https://themewagon.github.io/stocker/img/service-2.jpg" alt="" />
+                    <img className='img-fluid'  src={img6} alt="" />
 
                     </div>
                     <div className="card-body">
                         <h1 className='text-center text-3xl font-semibold '>Investing Strategies</h1>
-                        <h1 className='mt-3 text-lg text-center'>Learn proven strategies and tips to build and manage your investment portfolio effectively. </h1>
+                        <h1 className='mt-3 text-lg text-center'>Investing strategies involve diversifying assets, managing risk, and selecting opportunities for long-term growth and returns. </h1>
                         <button className='bg-emerald-400 w-100 rounded-2xl p-1 mt-3 font-semibold text-white'>Learn More</button>
 
                     </div>

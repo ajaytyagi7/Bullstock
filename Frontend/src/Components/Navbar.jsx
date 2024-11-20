@@ -6,8 +6,9 @@ import { useState } from 'react';
 import { FaTimes } from "react-icons/fa";
 import { FiX } from "react-icons/fi";
 import { CiMenuBurger } from "react-icons/ci";
-import { FiAlignJustify } from "react-icons/fi";
 import logo from '../Images/logo.png'
+import { FiAlignJustify } from "react-icons/fi";
+import { FiMenu } from "react-icons/fi";
 
 
 
@@ -47,9 +48,9 @@ const Navbar = () => {
     }
   }
   const content = <>
-  <div className="lg:hidden block absolute top-20 w-full left-0 right-0 bg-slate-50 transition">
+  <div className=" navbar lg:hidden block absolute top-20 w-full left-0 right-0 bg-slate-50 transition">
     <ul className="text-center text-xl p-20 text-black">
-      <Link   to="Home">
+      <Link to="Home">
       <li className="my-4 py-4 border-b border-[#638ed4] hover:bg-[#638ed4] hover:rounded" onClick={closeNav}>Home</li>
       </Link>
      <Link  to="Community">
@@ -70,8 +71,8 @@ const Navbar = () => {
   </div>
 </>
   return (
-    <div className='bg-slate-50 '>
-     <nav>
+    <div className='bg-slate-50  '>
+     <nav >
        <div className="h-5vh flex justify-between z-50 text-white lg:py-5 px-10 py-1 border-b border-slate-800">
         <div className="flex items-center flex-1">
           <img className='img-fluid h-16' src={logo} alt="" />  
@@ -106,7 +107,7 @@ const Navbar = () => {
           {click && content}
         </div>
         <button  className="block sm:hidden transition dark" onClick={handleClick}>
-           {click ? <FiX/> : <FiAlignJustify />}
+           {click ? <FiX/> :<FiMenu />}
         </button>
        </div>
     </nav>
