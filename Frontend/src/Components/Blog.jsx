@@ -20,7 +20,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchBlogData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/blog/getall');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/blog/getall`);
         setBlogList(response.data);
       } catch (error) {
         console.error('Failed to fetch blog data:', error);

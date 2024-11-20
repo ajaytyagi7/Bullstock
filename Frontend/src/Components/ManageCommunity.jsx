@@ -5,7 +5,7 @@ const ManageCommunity = () => {
   const [community, setcommunity] = useState([]);
 
   const fetchCommunityData = async () => {
-    const res = await fetch('http://localhost:5000/community/getall');
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/community/getall`);
     const data = await res.json();
     setcommunity(data);
   };
@@ -15,7 +15,7 @@ const ManageCommunity = () => {
   }, []);
 
   const deleteCommunity = async (id) => {
-    const res = await fetch('http://localhost:5000/community/delete/'+ id, {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/community/delete/`+ id, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'

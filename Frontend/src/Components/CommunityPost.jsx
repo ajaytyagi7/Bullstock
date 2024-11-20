@@ -22,7 +22,7 @@ const CommunityPost = () => {
             value.details = desc;
             value.image = selFile;
             console.log(value)
-            const res = await fetch('http://localhost:5000/community/add', {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/community/add`, {
                 method: 'POST',
                 body: JSON.stringify(value),
                 headers: {
@@ -52,7 +52,7 @@ const CommunityPost = () => {
         setSelFile(file.name);
         const fd = new FormData();
         fd.append("myfile", file);
-        fetch("http://localhost:5000/util/uploadfile", {
+        fetch(`${import.meta.env.VITE_API_URL}/util/uploadfile`, {
             method: "POST",
             body: fd,
         }).then((res) => {

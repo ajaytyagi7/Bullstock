@@ -34,7 +34,7 @@ const Signup = () => {
         onSubmit: async (values, { setSubmitting }) => {
           console.log(values);
     
-          const res = await fetch('http://localhost:5000/user/add', {
+          const res = await fetch(`${import.meta.env.VITE_API_URL}/user/add`, {
             method: 'POST',
             body: JSON.stringify(values),
             headers: {
@@ -48,7 +48,7 @@ const Signup = () => {
           if (res.status == 200) {
             enqueueSnackbar('Register Successfuly ', { variant: 'success' });
             resetForm();
-            navigate('/')
+            navigate('/Login')
 
           } else if (res.status == 401) {
             enqueueSnackbar('Invalid Email', { variant: 'error' });

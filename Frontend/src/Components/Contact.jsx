@@ -16,7 +16,7 @@ const Contact = () => {
         onSubmit: async (values, { setSubmitting }) => {
             console.log(values);
       
-            const res = await fetch('http://localhost:5000/contact/add', {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/contact/add`, {
               method: 'POST',
               body: JSON.stringify(values),
               headers: {

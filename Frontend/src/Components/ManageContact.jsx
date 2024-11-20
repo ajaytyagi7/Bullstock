@@ -5,7 +5,7 @@ const ManageContact = () => {
   const [userList, setuserList] = useState([]);
 
   const fetchContactData = async () => {
-    const res = await fetch('http://localhost:5000/contact/getall');
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/contact/getall`);
     const data = await res.json();
     setuserList(data);
   };
@@ -15,7 +15,7 @@ const ManageContact = () => {
   }, []);
 
   const deleteContactData = async (id) => {
-    const res = await fetch('http://localhost:5000/contact/delete/'+ id, {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/contact/delete/`+ id, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'

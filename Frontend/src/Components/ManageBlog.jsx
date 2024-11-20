@@ -24,7 +24,7 @@ const ManageBlog = () => {
 
   const deleteBlogData = async (id) => {
     try {
-      const res = await fetch('http://localhost:5000/blog/delete/' + id, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/blog/delete/` + id, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'

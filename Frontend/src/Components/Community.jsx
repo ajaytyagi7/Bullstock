@@ -15,7 +15,7 @@ const Community = () => {
 
   const fetchCommunity = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/community/getall');
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/community/getall`);
       setCommunity(response.data);
     } catch (err) {
       console.error('Error fetching community posts:', err);
@@ -25,7 +25,7 @@ const Community = () => {
 
   const handleLike = async (id) => {
     try {
-      const response = await axios.post(`http://localhost:5000/community/posts/${id}/like`);
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/community/posts/${id}/like`);
       setCommunity(community.map(post => post._id === id ? response.data : post));
     } catch (err) {
       console.error('Error liking post:', err);
@@ -35,7 +35,7 @@ const Community = () => {
 
   const handleCommentSubmit = async (id) => {
     try {
-      const response = await axios.post(`http://localhost:5000/community/posts/${id}/comment`, { content: newCommentContent[id] });
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/community/posts/${id}/comment`, { content: newCommentContent[id] });
       setCommunity(community.map(post => post._id === id ? response.data : post));
       setNewCommentContent({ ...newCommentContent, [id]: '' });
     } catch (err) {
@@ -52,7 +52,7 @@ const Community = () => {
           <div className="col-md-8 mx-auto" key={post._id}>
             <div className="card  shadow-lg rounded-lg">
               <div>
-                <img className="img-fluid mx-auto w-100 rounded" src={'http://localhost:5000/' + post.image} alt="" />
+                <img className="img-fluid mx-auto w-100 rounded" src={`${import.meta.env.VITE_API_URL}` + post.image} alt="" />
               </div>
               <div className='p-3'>
                 <h1 className=" text-3xl font-semibold mb-3 text-center">{post.title}</h1>
