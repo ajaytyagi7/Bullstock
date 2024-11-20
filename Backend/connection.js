@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const url="mongodb+srv://contactbullstocks:3NKY2pjEPvvYtQ36@bullstock.0udkw.mongodb.net/BullStock?retryWrites=true&w=majority&appName=Bullstock"
 
-mongoose.connect(url)
+mongoose.connect(process.env.URL)
 .then((result) => {
     console.log('Connected to mongoose')
     

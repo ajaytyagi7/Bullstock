@@ -15,7 +15,7 @@ const CommunityRouter = require('./Router/communityRouter');
 
 
 
-
+require("dotenv").config();
 const cors = require('cors');
 
 

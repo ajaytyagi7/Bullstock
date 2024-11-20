@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-import img2 from '../Images/img3.png';
+import img2 from '../Images/img2.png';
 
 const Blog = () => {
   const [blogList, setBlogList] = useState([]);
