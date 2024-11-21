@@ -1,10 +1,13 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const url = process.env.URI;
+const uri = process.env.MONGO_URI;
 
+if (!uri) {
+    throw new Error('Mongo URI is missing')
+}
 
-mongoose.connect(url)
+mongoose.connect(uri)
 .then((result) => {
     console.log('Connected to mongoose')
     
