@@ -5,22 +5,13 @@ const BlogRouter = require('./Router/blogRouter');
 const utilRouter = require('./Router/util');
 const ContactRouter = require('./Router/contactRouter');
 const CommunityRouter = require('./Router/communityRouter');
-
-
-
-
-
-
-
-
-
-
 require("dotenv").config();
+require('dotenv').config();
 const cors = require('cors');
 
 
 const app=express();
-const port= 5000;
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
@@ -44,4 +35,4 @@ app.use(express.static('./uploads'));
 
 
 
-app.listen(port,() =>{console.log('Server Started !!')});
+app.listen(port,() =>{console.log(`Server Started !!`)});
