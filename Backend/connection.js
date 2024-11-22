@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-require('dotenv').config({path: './Backend/.env'});
+require('dotenv').config({path:'./Backend/.env'});
 
-console.log('Environment Variables:', process.env);
+
 
 const uri = process.env.MONGO_URI;
 console.log(uri)
