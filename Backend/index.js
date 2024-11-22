@@ -28,4 +28,8 @@ app.use('/util', utilRouter);
 app.use(express.static('./uploads'));
 
 
-app.listen(port,() =>{console.log(`Server Started !!`)}); 
+app.listen(port,(err)=>{
+    if(err)console.log(err);
+    else 
+    console.log(`server is running on port number : ${port}`);
+    })
