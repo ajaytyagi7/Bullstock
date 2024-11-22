@@ -6,7 +6,7 @@ const utilRouter = require('./Router/util');
 const ContactRouter = require('./Router/contactRouter');
 const CommunityRouter = require('./Router/communityRouter');
 require("dotenv").config();
-require('dotenv').config();
+// require('dotenv').config();
 const cors = require('cors');
 
 
