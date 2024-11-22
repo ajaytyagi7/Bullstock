@@ -6,7 +6,7 @@ const ManageBlog = () => {
 
   const fetchBlogData = async () => {
     try {
-      const res = await fetch('http://localhost:5000/blog/getall');
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/blog/getall`);
       if (!res.ok) {
         throw new Error('Network response was not ok');
       }

@@ -52,7 +52,7 @@ const CommunityPost = () => {
         setSelFile(file.name);
         const fd = new FormData();
         fd.append("myfile", file);
-        fetch('http://localhost:5000/util/uploadfile', {
+        fetch(`${import.meta.env.VITE_API_URL}/util/uploadfile`, {
             method: "POST",
             body: fd,
         }).then((res) => {
