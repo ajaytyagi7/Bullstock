@@ -1,19 +1,21 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
+require('dotenv').config({path: './Backend/.env'});
+
+console.log('Environment Variables:', process.env);
 
 const uri = process.env.MONGO_URI;
-console.log('MongoDB URI:', uri);
-
+console.log(uri)
 if (!uri) {
-    throw new Error('Mongo URI is missing');
+    throw new Error('Mongo URI is missing')
 }
 
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then((result) => {
-        console.log('Connected to mongoose');
-    })
-    .catch((err) => {
-        console.error('Error connecting to MongoDB:', err);
-    });
+mongoose.connect(uri)
+.then((result) => {
+    console.log('Connected to mongoose')
+    
+}).catch((err) => {
+    console.error(err)
+    
+});
 
-module.exports = mongoose;
+module.exports=mongoose
