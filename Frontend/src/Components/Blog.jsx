@@ -65,7 +65,7 @@ const Blog = () => {
                   <div className='col-md-4 mt-3' key={blog.id}>
                     <div data-aos="fade-left" className="card mb-3 border-emerald-400">
                       <div>
-                        <img className='img-fluid w-100' src={'http://localhost:5011/' + blog.image} alt='' />
+                        <img className='img-fluid w-100' src={'http://localhost:5001/' + blog.image} alt='' />
                       </div>
                       <div className="card-body">
                         <h1 className='text-lg font-semibold'>{blog.catagory}</h1>
