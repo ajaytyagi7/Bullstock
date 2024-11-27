@@ -52,7 +52,7 @@ const Community = () => {
           <div className="col-md-8 mx-auto" key={post._id}>
             <div className="card  shadow-lg rounded-lg">
               <div>
-                <img className="img-fluid mx-auto w-100 rounded h-96" src={'http://localhost:5001/' + post.image} alt="" />
+                <img className="img-fluid mx-auto w-100 rounded h-96" src={'http://localhost:5013/' + post.image} alt="" />
               </div>
               <div className='p-3'>
                 <h1 className=" text-3xl font-semibold mb-3 text-center">{post.title}</h1>
