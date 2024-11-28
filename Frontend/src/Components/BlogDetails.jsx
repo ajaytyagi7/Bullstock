@@ -25,7 +25,7 @@ const BlogDetails = () => {
       <div className='col-md-10 mx-auto'>
         {blogDetails.map((item) => (
           <div className='py-5' key={item.id}>
-            <img className='img-fluid mx-auto w-75' src={'http://88.222.212.179:5013/' + item.image} alt="" />
+            <img className='img-fluid mx-auto w-75' src={'http://localhost:5013/' + item.image} alt="" />
             <h1 className='mt-3 text-3xl font-semibold mb-3 text-center'>{item.title}</h1>
             <p>{item.date}</p>
             <MDEditor.Markdown className='p-3 ' source={item.details} style={{ whiteSpace: 'pre-wrap' }} />
