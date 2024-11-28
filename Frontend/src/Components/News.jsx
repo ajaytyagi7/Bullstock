@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'   
 import Ticker from './Ticker';
-import img2 from '../Images/img2.png'
+import img2 from '../images/img2.png'
 
 
 const News = () => {
