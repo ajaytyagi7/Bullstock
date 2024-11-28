@@ -16,7 +16,7 @@ const port = process.env.PORT || 5015;
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(cors({
-    orgin: 'http://localhost:4173'
+    orgin: 'http://localhost:5173'
 
 }));
 
